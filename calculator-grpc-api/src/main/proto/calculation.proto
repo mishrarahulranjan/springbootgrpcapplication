@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.calculator.grpc.api";
+option java_outer_classname = "CalculationProto";
+
+// The calculation service definition.
+service CalculationService {
+  // sends a calculation request
+  rpc calculate (CalculationRequest) returns (CalculationResponse) {
+  }
+}
+
+message CalculationRequest {
+  int64 num1 = 1;
+  int64 num2 = 2;
+}
+
+// The response message containing the results
+message CalculationResponse {
+  int64   num    = 2;
+}

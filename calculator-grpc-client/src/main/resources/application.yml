@@ -1,0 +1,13 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: Calculator Client Application
+
+grpc:
+  client:
+    server:
+      address: 'static://127.0.0.1:9091'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
